@@ -27,6 +27,28 @@ var mainView = app.views.create('.view-main');
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+        // cada un@ pone su magia para recuperar el mail y la clave de un form...
+        var emailDelUser = "elvalor@delmail.com";
+        var passDelUser = "1234567890";
+    
+    firebase.auth().signInWithEmailAndPassword(emailDelUser, passDelUser)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+    
+        console.log("Bienvenid@!!! " + emailDelUser);
+        // ...
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+    
+        console.error(errorCode);
+            console.error(errorMessage);
+      });
+    
+    
+    
 });
 
 // Option 1. Using one 'page:init' handler for all pages
@@ -41,3 +63,6 @@ $$(document).on('page:init', '.page[data-name="about"]', function (e) {
     console.log(e);
     alert('Hello');
 })
+ 
+
+
