@@ -27,28 +27,22 @@ var mainView = app.views.create('.view-main');
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
-        // cada un@ pone su magia para recuperar el mail y la clave de un form...
-        var emailDelUser = "elvalor@delmail.com";
-        var passDelUser = "1234567890";
-    
-    firebase.auth().signInWithEmailAndPassword(emailDelUser, passDelUser)
-      .then((userCredential) => {
-        // Signed in
-        var user = userCredential.user;
-    
-        console.log("Bienvenid@!!! " + emailDelUser);
-        // ...
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-    
-        console.error(errorCode);
-            console.error(errorMessage);
-      });
-    
-    
-    
+    email="manuel@gmail.com";
+    password="123456";
+    //promesa
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Signed in
+      var user = userCredential.user;
+      console.log("Usuario  creado");
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.error(error+"--"+errorMessage);
+      // ..
+    }); 
 });
 
 // Option 1. Using one 'page:init' handler for all pages
@@ -57,11 +51,11 @@ $$(document).on('page:init', function (e) {
     console.log(e);
 })
 
-// Option 2. Using live 'page:init' event handlers for each page
+// Option 2. Using live 'page:about' event handlers for each page
 $$(document).on('page:init', '.page[data-name="about"]', function (e) {
     // Do something here when page with data-name="about" attribute loaded and initialized
     console.log(e);
-    alert('Hello');
+    alert('plantas');
 })
  
 

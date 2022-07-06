@@ -23,7 +23,7 @@
     <meta name="color-scheme" content="light dark">
 
     <!-- Your app title -->
-    <title>Consultorio Odontologico LAFU</title>
+    <title>My App</title>
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="lib/framework7/framework7-bundle.css">
     <!-- Path to icons -->
@@ -56,7 +56,7 @@
                 <!-- Toolbar links -->
                 <a href="#" class="link">Link 1</a>
 
-                <a href="acceso.html" class="link">Acceso</a>
+                <a href="especialistas.html" class="link">especialistas</a>
                 </div>
             </div>
         
@@ -65,23 +65,69 @@
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
-                        <h1>Consultorio Odontologico LAFU</h1>
+                        <h1>Registro de la app</h1>
 
 
-
-                
+                            <div class="list no-hairlines-md">
+                                <ul>
+                                 <li class="item-content item-input">
+                                    <div class="item-media">
+                                    <i class="icon demo-list-icon"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                    <div class="item-title item-label">E-mail</div>
+                                    <div class="item-input-wrap">
+                                        <input type="email" placeholder="Your e-mail" />
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                    </div>
+                                </li>
+                                <li class="item-content item-input">
+                                    <div class="item-media">
+                                    <i class="icon demo-list-icon"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                    <div class="item-title item-label">Password</div>
+                                    <div class="item-input-wrap">
+                                        <input type="password" placeholder="Your password" />
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                    </div>
+                                </li>
+                               
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <script type="text/javascript" src="cordova.js"></script>
     <!--<script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>-->
     <script type="text/javascript" src="lib/framework7/framework7.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
 
+
+    <script>
+        // Your web app's Firebase configuration
+      const firebaseConfig = {
    
+  apiKey: "AIzaSyBrN4B6K2vErgg_pfY6hEhVEN4BohAOjAs",
+  authDomain: "prueba-78dc7.firebaseapp.com",
+  projectId: "prueba-78dc7",
+  storageBucket: "prueba-78dc7.appspot.com",
+  messagingSenderId: "29851927741",
+  appId: "1:29851927741:web:5f68020a3ed6b6e9dde3d4"
+};
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
 
 
 </body>
