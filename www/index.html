@@ -20,7 +20,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <!-- Color theme for statusbar -->
     <!-- <meta name="theme-color" content="#2196f3"> -->
-    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light blue">
 
     <!-- Your app title -->
     <title>Consultorio Odontologico LAFU</title>
@@ -31,6 +31,7 @@
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 
 <body>
     <div id="app">
@@ -44,7 +45,9 @@
             <div class="navbar">
                 <div class="navbar-bg"></div>
                 <div class="navbar-inner">
-                    <div class="left"><i class="icon icon-back"></i></div>
+                    <div class="left">
+                        <img src="img/logo.png" width="90" height="90" class="icon-back">
+                        <a href="/index/" class="link">Inicio</a></div>
                     <div class="title">Page Title</div>
                     <div class="right"><i class="icon icon-forward"></i></div>
                 </div>
@@ -54,18 +57,60 @@
             <div class="toolbar toolbar-bottom">
                 <div class="toolbar-inner">
                 <!-- Toolbar links -->
-                <a href="#" class="link">Link 1</a>
-
-                <a href="acceso.html" class="link">Acceso</a>
+            
+                <a href="/Acceso/" class="link">Acceso</a>
+               
+                <a href="/Registro Especialistas/" class="link">Registro</a>
                 </div>
             </div>
         
         <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="index" class="page">
+            <div data-name="index" class="  background page">
+                <ul class="background">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                 </ul>
+
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
-                        <h1>Consultorio Odontologico LAFU</h1>
+                        <div class="row no-gap">
+                            <div class="col-20"> <img src="img/logo.png" width="200" height="200"></div>
+                           
+                            <div class="col-80 block-title-medium center" > <h1 class="text-align-center" > Centro Odontologico LAFU</h1></div>
+                            
+                        </div>
+                   
+                        <div class="row">
+                            <div class="col-70 medium-50 padding-top padding-bottom" ></div>
+                            <video  width="1000"height="500" autoplay class="center">
+                                <source src="img/F2mp_download_hd.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="col-100 medium-50" >
+                                <h1>Pie</h1>
+                            </div>
+
+                        </div>
+                        
+                              
+                        
+                 </div>
 
 
 
@@ -76,11 +121,31 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <!--<script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>-->
-    <script type="text/javascript" src="lib/framework7/framework7.js"></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
 
+<!--<script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>-->
+<script type="text/javascript" src="lib/framework7/framework7.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+
+<script>
+    // Your web app's Firebase configuration
+  const firebaseConfig = {
+
+apiKey: "AIzaSyBrN4B6K2vErgg_pfY6hEhVEN4BohAOjAs",
+authDomain: "prueba-78dc7.firebaseapp.com",
+projectId: "prueba-78dc7",
+storageBucket: "prueba-78dc7.appspot.com",
+messagingSenderId: "29851927741",
+appId: "1:29851927741:web:5f68020a3ed6b6e9dde3d4"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</div>
    
 
 
