@@ -1,5 +1,6 @@
 <!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
 <div class="page" data-name="acceso">
+    
     <div class="navbar">
         <div class="navbar-inner sliding">
         <div class="left">
@@ -8,7 +9,7 @@
             <span class="ios-only">Back</span>
             </a>
         </div>
-        <div class="title">Registro Pacientes</div>
+      
         </div>
     </div>
     <div class="page-content">
@@ -19,9 +20,9 @@
                 <i class="icon demo-list-icon"></i>
                 </div>
                 <div class="item-inner">
-                <div class="item-title item-label">E-mail</div>
+                <div class="item-title item-label">Email:  </div>
                 <div class="item-input-wrap">
-                    <input type="email" placeholder="Your e-mail" />
+                    <input type="email" placeholder="Ingresa Email" id="aEmail" />
                     <span class="input-clear-button"></span>
                 </div>
                 </div>
@@ -31,9 +32,9 @@
                 <i class="icon demo-list-icon"></i>
                 </div>
                 <div class="item-inner">
-                <div class="item-title item-label">Password</div>
+                <div class="item-title item-label">Contraseña</div>
                 <div class="item-input-wrap">
-                    <input type="password" placeholder="Your password" />
+                    <input type="password" placeholder="Ingresa Contraseña: " id="aContraseña" />
                     <span class="input-clear-button"></span>
                 </div>
                 </div>
@@ -43,11 +44,22 @@
 
         <div class="block block-strong">
             <p class="row">
-              <button class="col button button-raised color-blue">Accesar</button>
+              <button class="col button button-raised color-blue" id="bAcceso">Accesar</button>
+
+              <div class="block" id ="aMensaje"></div>
+
+
+        </div>
+    <div class="block block-strong">
+        <p>Si no tiene usuario</p>
+        <p class="row">
+          <a href="/Registro Especialistas/" class="col button button-raised color-blue">Registro</a>
+
 
     </div>
-       
+
+
               
-    </div>
+  </div>
     
 </div>
