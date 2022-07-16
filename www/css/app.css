@@ -618,7 +618,7 @@ code {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 90px;
   top: 0;
   border-bottom: 1px solid transparent;
 }
@@ -764,9 +764,7 @@ code {
 .pie-chart svg {
   max-width: 320px;
 }
-.black-strong{
-  background-color: transparent;
-}
+
 
 @keyframes cube {
   from {
